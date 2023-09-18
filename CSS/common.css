@@ -1,0 +1,1277 @@
+
+/* 整体框架  不设定高度 */
+.sum {
+    /* width: 1879px; */
+    margin: 0 auto;
+    background-image: url(../CF/653421385804853.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+/* 头部 */
+.header {
+display: block;
+height: 472px;
+/* width: 100%; */
+}
+/* 头部版心 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+    height: 75px;
+}
+/* -------------------------------------------------------------- */
+/* 土豆盒子原版 */
+/* .tudou::before {
+    position: absolute;
+    content: '';
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(223,78,58,0.7) url(CF/v-ico.png) no-repeat center;
+} 
+.tudou:hover::before {
+    默认行内元素转块元素
+    display: block;
+    background: rgba(223,78,58,.7) url(CF/v-ico.png) no-repeat center;
+
+} */
+/* ------------------------------------------------------------- */
+/* 土豆案例阴影图  改进终极版*/
+.tudou::before {
+    /* 透明的块级元素 */
+    display: block;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(223,78,58,0);
+    background-position:50% 50%;
+    transform: scale(2.5);
+    /* 两个动画,放一起加,否则会层叠 */
+    transition: background .3s ease-in-out ,transform .3s ease-in-out;
+    /* 给父盒子加 */
+    /* overflow: hidden; */
+} 
+.tudou:hover::before {
+    /* 变得不透明了 */
+    background: rgba(223,78,58,.9) url(../CF/v-ico.png) no-repeat center;
+    transform: none;
+}
+/* ---------------------------------------------------- */
+/* 盒子漂浮 */
+.trans:hover{
+    /* transform: translateY(-3px); */
+    transform:scale(1.1);
+}
+/* 添加一个过渡动画,谁有动画给谁加 */
+.trans {
+    transition: all .2s ease;
+    /* 加一个溢出隐藏,更加美观 这个地方加不了,给它的父盒子加 
+    overflow: hidden;*/
+}
+/* ------------------------------------------------ */
+/* 盒子旋转 */
+
+ @keyframes move {
+    0% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+ .xuan:hover {
+     animation: move 2s linear infinite;
+} 
+/* ---------------------------------------------------- */
+/* 盒子下落 */
+@keyframes fall {
+    0% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* 扩散动画 */
+@keyframes kuo {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(3);
+    }
+}
+.download_1 .span1 {
+      animation: kuo 4s linear infinite backwards;
+}
+.download_2 .span2 {
+    animation: kuo 4s linear infinite backwards;
+   
+}
+/* ------------------------------------------------------ */
+   /* .v-overlay { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(223,78,58,.9);
+   } */
+/* 头部第一行 */
+.shortcut {
+    height: 75px;
+}
+.shortcut ul {
+    margin-left: 300px;
+}
+.shortcut ul li{
+    float: left;
+    line-height: 20px;
+    /* 添加精灵图 */
+}
+.shortcut ul li a {
+    float: left;
+    padding-top: 20px;
+    width: 128px;
+    height: 75px;
+    
+}
+.shortcut  ul li a span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);  
+    text-align: center;
+    /* transform: scale(0.8); */  
+}
+.shortcut .da {
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+}
+.shortcut .xiao {
+    font-size: 12px;
+    transform: scale(0.8);
+    font-weight: 400;
+    color: rgb(109, 111, 113);
+} 
+
+/* 头部下面列表 */
+.nav {
+    height: 200px;
+}
+
+.navlist {
+    width: 900px;
+}
+.nav div {
+    height: 200px;
+    padding-left: 300px;
+    padding-bottom: 20px;
+    
+}
+.navlist dd ul{
+    float: left;
+    width: 128px;
+    height: 180px;
+    padding-top: 10px;
+}
+.navlist dd ul li {
+    height: 24px;
+    width: 128px;
+    text-align: center;
+
+}
+
+/* 图标 */
+.m-sp {
+    background-image: url(../CF/mod-sp.png);
+    background-repeat: no-repeat;
+}
+/* 红色图标位置 */
+.hotl1 {
+background-position: 15px 6px;
+}
+/* 蓝色图标位置 */
+.hotl2 {
+    background-position: 15px -43px;
+}
+/* 黄色图标位置 */
+.hotl3 {
+    background-position: 15px -22px;
+}
+
+.navlist dd ul li a{
+    /* width: 52px;
+    height: 17px; */
+
+    font-size: 13px;
+    color: #fff;
+    transition: border .5s;
+    /* font-weight: 700; */
+}
+.navlist dd ul li a:hover{
+    border-bottom: 2px solid #cf1111;
+}
+
+#lian {
+    display:block;
+    height: 200px;
+}
+
+/* 超大盒子 */
+.article {
+    position: relative;
+    /* background-image: url(CF/653421385804853.png); */
+    /* height: 520px; */
+    margin: 0 auto;
+    width: 1192px;
+}
+/* 外侧广告图片 */
+.adv_l .left3{
+    position: absolute;
+    width: 166px;
+    height: 439px;
+    /* background-color: pink; */
+    left: 50%;
+    margin-left: -772px;
+    z-index: 2;
+}
+.left4 {
+    position: absolute;
+    width: 164px;
+    height: 250px;
+    left: 50%;
+    margin-left: -772px;
+    margin-top: 450px;
+    /* background-color: pink; */
+    z-index: 2;
+}
+
+/* 下方固定图片 */
+.fixed-image {
+    position: fixed;
+    bottom: 0;
+    left: 11%;
+    z-index: 1;
+    /* overflow: hidden; */
+}
+.map {
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    left: 50%;
+    margin-left: 602px;
+}
+.age {
+    position: absolute;
+    top: 0;
+    right: -14%;
+    z-index: 1;
+}
+.adv_r1 {
+    position: absolute;
+    width: 166px;
+    height: 398px;
+    left: 50%;
+    top: 130px;
+    margin-left: 596px;
+}
+.adv_1  a{
+    display: block;
+}
+.adv_r2 {
+    position: absolute;
+    left: 100%;
+    top: 29%;
+}
+
+
+
+/* 总共520 */
+.xia {
+    position: relative;
+    /* margin: 0 auto; */
+    height: 122px;
+    /* width: 1192px; */
+      overflow: hidden;
+    
+}
+
+.xia a{
+    position: relative;
+    /* display:inline-block; */
+    /* vertical-align: top;     */
+    float: left;
+    width: 116px;
+    height: 122px;
+    /* line-height: 122px; */
+    font-size: 14px;
+    text-align:center;
+    padding-top: 60px;
+    background-color:rgb(41, 39, 53);
+    /* color: pink; */
+    color:aliceblue;
+    overflow: hidden;
+}
+
+.xia em {
+   display: block;
+   position: absolute;
+    top: 31px;
+    left: 50px;
+   width: 21px;
+    height: 21px;
+}
+.xia a:hover em {
+     animation: fall 1s ;
+}
+.xia  .em1 {
+    background: url(../CF/sprite.png) no-repeat -52px -36px;
+}
+.xia .em2 {
+    background: url(../CF/sprite.png) no-repeat -74px -36px;
+}
+.xia .em3 {
+        background: url(../CF/sprite.png) no-repeat -98px -36px;
+}
+.xia .em4 {
+     background: url(../CF/sprite.png) no-repeat -122px -36px;
+}
+.xia .em5 {
+    width: 25px;
+         background: url(../CF/sprite.png) no-repeat -142px -36px;
+}
+.xia .em6 {
+    background: url(../CF/sprite.png) no-repeat -170px -36px;
+}
+
+.xia .download_1 {
+    padding: 0;
+    width: 268px;
+    font-size: 22px;
+  
+    /* height: 100%; */
+    
+    /* background:url(CF/down.jpg); */
+}
+.xia .download_2 {
+    /* line-height: 122px; */
+    padding: 0;
+    width: 228px;
+    font-size: 22px;
+    
+    /* height: 100%; */
+   
+    /* background: url(CF/version.jpg); */
+}
+.span1 {
+    width: 268px;
+    height: 118px;
+    background: url(../CF/down.jpg) 0 0 no-repeat;
+    position: absolute;
+    /* 因为文字居中对齐,对图片也有影响,所以需要添加一个x,y */
+    left: 2px;
+    top: 2px;
+    z-index: 0;
+}
+.span2 {
+    width: 228px;
+    height: 118px;
+    background: url(../CF/version.jpg) 0 0 no-repeat;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    z-index: 0;
+}
+.txt {
+    z-index: 2;
+    position: relative;
+    top: 42px;
+}
+
+.slides {
+    position:relative;
+    margin-top: 8px;
+    width: 804px;
+    height: 402px;
+    float: left;
+    background-color: #eee;
+    overflow: hidden;
+}
+/* 给li添加轮播图效果 */
+/* .slides li{
+    animation: move 30s ease 1s infinite;
+} 
+@keyframes move {
+      0% {
+        transform: translateX(0);
+      }
+      11% {
+        transform: translateX(-804px);
+      }
+      16% {
+        transform: translateX(-804px);
+      }
+      21% {
+        transform: translateX(-1608px);
+      }
+      28% {
+        transform: translateX(-1608px);
+      }
+      33% {
+        transform: translateX(-2412px);
+      }
+      40% {
+        transform: translateX(-2412px);
+      }
+      45% {
+        transform: translateX(-3216px);
+      }
+      52% {
+        transform: translateX(-3216px);
+      }
+      57% {
+        transform: translateX(-4020px);
+
+      }
+      64% {
+        transform: translateX(-4020px);
+
+      }
+      71% {
+        transform: translateX(-4824px);
+
+      }
+      76% {
+        transform: translateX(-4824px);
+
+      }
+      83% {
+        transform: translateX(-5628px);
+
+      }
+      88% {
+        transform: translateX(-5628px);
+
+      }
+      95% {
+        transform: translateX(0);
+
+      }
+      100% {
+        transform: translateX(0);
+
+      }
+    } */
+ .slide {
+    /* 三张背景图重叠 */
+    position: absolute;
+    /* 宽度与高度继承父容器的大小 */
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 加入动画的过渡设定 */
+    transition: .5s transfrom ease-in-out;
+}
+.slide a {
+    display: block;
+    width: 804px;
+    height: 402px;
+}
+/* 给轮播图添加选择器,分别设置三张轮播图的颜色 */
+.slide:nth-of-type(1) {
+    /* transform: translateX(0); */
+    background: url(../CF/主页切图1.jpeg);
+    /* background-color: #F2E205; */
+}
+.slide:nth-of-type(2) {
+    /* background-color: #F25C05; */
+    background: url(../CF/主页切图2.jpeg);
+    left: 100%;
+}
+.slide:nth-of-type(3) {
+    /* background-color: #495F8c; */
+    background: url(../CF/主页切图3.jpeg);
+    left: 200%;
+}
+.slide:nth-of-type(4) {
+    /* background-color: #495F8c; */
+    background: url(../CF/主页切图4.jpeg);
+    left: 300%;
+}
+.slide:nth-of-type(5) {
+    /* background-color: #495F8c; */
+    background: url(../CF/主页切图5.jpeg);
+    left: 400%;
+}
+.slide:nth-of-type(6) {
+    /* background-color: #495F8c; */
+    background: url(../CF/主页切图6.jpeg);
+    left: 500%;
+}
+.slide:nth-of-type(7) {
+    /* background-color: #495F8c; */
+    background: url(../CF/主页切图7.jpeg);
+    left: 600%;
+}
+.slide:nth-of-type(8) {
+    /* background-color: #495F8c; */
+    background: url(../CF/主页切图8.jpeg);
+    left: 700%;
+}
+input[type="radio"] {
+    position: relative;
+    /* 提升层级性 */
+    z-index: 100;
+    display: none;
+}
+.controls-visible {
+    display: flex;
+    justify-content:space-between;
+    position: absolute;
+    width: 100%;
+    bottom:0;
+    left: 0;
+    line-height: 36px;
+    text-align: center;
+    background-color: rgba(0, 0, 0,.7);
+}
+.controls-visible label {
+    /* display: block; */
+    height: 36px;
+    /* background-color: rgba(0, 0, 0,.1); */
+    color: #fff;
+    /* border-radius: 50%; */
+    padding-left: 16px;
+    border: 1px solid rgba(0, 0, 0,.7);
+}
+.controls-visible label:hover {
+    background-color: red;
+}
+
+
+/* ------------------------------------------------------- */
+/* 判断当第一个radio按钮是已选择的状态时 加入~符号,找它同一层之后, .controls-visible里面的 label:nth-of-type(1)
+选择到第一个label */
+.slides input[type="radio"]:nth-of-type(1):checked ~ .controls-visible label:nth-of-type(1){
+    /* 这样就可以看到点击第一个label的时候,显示为选中的样式 */
+    background-color: #333;
+}
+/* --------------------------------------------- */
+/* 同理设置第二个和第三个label */
+.slides input[type="radio"]:nth-of-type(2):checked ~ .controls-visible label:nth-of-type(2){
+    background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(3):checked ~ .controls-visible label:nth-of-type(3){
+    background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(4):checked ~ .controls-visible label:nth-of-type(4){
+    background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(5):checked ~ .controls-visible label:nth-of-type(5){
+    background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(6):checked ~ .controls-visible label:nth-of-type(6){
+    background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(7):checked ~ .controls-visible label:nth-of-type(7){
+    background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(8):checked ~ .controls-visible label:nth-of-type(8){
+    background-color: #333;
+}
+/* 设置轮播图切换的效果 */
+/* 这个意思是,当选中了第一个radio按钮之后,后面三张 .slide 的样式
+由于我们本身已经将三张 slide 横向排列好,所以只需要因应radio按钮,
+将三个 slide 向左移动特定的距离就可以,而当选择了第一个radio按钮时,将transform 设定为 translatex(0%) */
+.slides input[type="radio"]:nth-of-type(1):checked ~ .slide{
+    transform: translateX(0%);
+}
+/* -100% 即是向左移动一倍的宽度 */
+.slides input[type="radio"]:nth-of-type(2):checked ~ .slide{
+    transform: translateX(-100%);
+}
+/* 同理 */
+.slides input[type="radio"]:nth-of-type(3):checked ~ .slide{
+    transform: translateX(-200%);
+}
+.slides input[type="radio"]:nth-of-type(4):checked ~ .slide{
+    transform: translateX(-300%);
+}
+.slides input[type="radio"]:nth-of-type(5):checked ~ .slide{
+    transform: translateX(-400%);
+}
+.slides input[type="radio"]:nth-of-type(6):checked ~ .slide{
+    transform: translateX(-500%);
+}
+.slides input[type="radio"]:nth-of-type(7):checked ~ .slide{
+    transform: translateX(-600%);
+}
+.slides input[type="radio"]:nth-of-type(8):checked ~ .slide{
+    transform: translateX(-700%);
+}
+
+.news {
+    float: right;
+    width: 388px;
+    height: 402px;
+    background: #fff;
+    margin-top: 8px;
+}
+.news  .newstab{
+    position: relative;
+    padding: 10px 20px 0;
+     height: 402px;
+}
+
+.news .hddd ul{
+    display: flex;
+    /* flex-direction: column; */
+    height: 50px;
+    justify-content:center;
+}
+.news .hddd ul a{
+    display: block;
+    float: left;
+    width: 97px;
+    height: 47px;
+    font-size: 14px;
+    line-height: 47px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.news .hddd ul a:hover {
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+.newstab .bddd {
+    padding-top: 18px;
+}
+.bddd .tab-panel {
+    height: 33px;
+}
+.tab-panel .news-list {
+    font-size: 14px;
+}
+.news-list .top-news{
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    margin-bottom: 5px;
+    /* overflow: hidden; */
+}
+.news-list .top-news a {
+    font-weight: 700;
+    color: #f54027;
+}
+
+/* 共性 */
+/* ------------------------------ */
+.item {
+    height: 40px;
+    line-height: 40px;
+    width: 350px;
+    border-bottom: dashed #eee 1px;
+}
+.lnk {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* -o-text-overflow: ellipsis; */
+    overflow: hidden;
+    float: left;
+    width: 300px;
+}
+.news-date {
+    float: right;
+    width: 40px;
+    color: #b4b5b5;
+}
+/* ------------------------------- */
+.newstab .more {
+    position: absolute;
+    height: 18px;
+    left: 2px;
+    bottom: 0;
+    width: 100%;
+    background: #f7f7f7;
+    height: 36px;
+}
+.newstab .more a {
+    display: block;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    color: #787777;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+
+.hot {
+    position: relative;
+    display: inline-block;
+    width: 820px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    margin-right: 10px;
+    /* background-color: pink; */
+}
+.hot h2 {
+    font-size: 20px;
+    color: #6c6c6c;
+    width: 812px;
+    line-height: 41px;
+    height: 41px;
+    border-bottom: 1px solid rgb(230, 227, 227);
+    margin-bottom: 20px;
+}
+.hot a {
+    /* position: relative; */
+    float: right;
+    line-height: 41px;
+    font-size: 14px;
+    font-weight: 200;
+    color: #787777;
+}
+.hot ul {
+    height:90px;
+}
+.hot ul li {
+    float: left;
+    margin-left: 5px;
+    /* 添加了那个放大动画 */
+    /* 管了两部分 */
+    overflow: hidden;
+
+}
+
+
+.center {
+    margin-top: 20px;
+    float: right;
+    width: 360px;
+}
+
+.center h2 {
+    display: block;
+    height: 41px;
+    font-size: 20px;
+    line-height: 41px;
+    border-bottom: 1px solid #6c6c6c;
+    margin-bottom: 20px;
+}
+.center ul li {
+    float: left;
+    height: 103px;
+    width: 120px;
+    padding-top: 28px;
+    text-align: center;
+    background-color: #f7f7f7;
+    /* -1的妙用 */
+    border: 1px solid rgb(230, 227, 227);
+    margin-left: -1px;
+    margin-top: -1px;
+}
+.center ul li:hover img {
+      animation: move 2s linear infinite;
+}
+.center ul li a {
+    display: block;
+   height: 100%;
+   width: 100%;
+}
+.center .span3 {
+    display: block;
+    margin: 0 auto 6px;
+    height: 26px;
+    width: 26px;
+}
+
+/* 玩家专区上 */
+.player {
+    /* position: relative; */
+    width: 1200px;
+    height: 543px;
+}
+.player .hd{
+    width: 1200px;
+    height: 102px;
+    margin: 30px 0;
+}
+.hd h2 {
+    font-size: 20px;
+    color: #6c6c6c;
+    width: 1200px;
+    line-height: 41px;
+    height: 41px;
+    border-bottom: 1px solid rgb(230, 227, 227);
+    margin-bottom: 20px;
+}
+.hd h2 a{
+    float: right;
+    line-height: 41px;
+    font-size: 14px;
+    font-weight: 200;
+    color: #787777;
+}
+.hd .tab_list ul a {
+    display: block;
+    /* float: right; */
+    font-size: 14px;
+    font-weight: 200;
+    color: #787777;
+}
+.tab_list ul {
+    height: 247px;
+}
+.hd .tab_list ul li {
+    float: left;
+}
+
+.hd .tab_list ul li a {
+    display: block;
+     width: 300px;
+    height: 41px;
+    font-size: 16px;
+    font-weight: 700;
+     line-height: 41px;
+    /* margin: 0 0; */
+    text-align: center;
+     border-bottom: 1px solid #787777;   
+}
+.hd .tab_list ul li a:hover {
+    color: #f54027;
+    border-color: #f54027;
+}
+
+/* .tiantian {
+    position: relative;
+} */
+
+/* 玩家专区下半部分 */
+.player .bd {
+    position: relative; 
+    /* height: 165px; */
+    margin-bottom: 30px;
+}
+.bd .tab_content {
+    height: 200px;
+}
+.bd .tab_content .tab_list_item {
+    display: flex;
+    justify-content:space-between
+   
+}
+
+.bd .tab_content .tab_list_item div {
+    position: relative;
+    width: 232px;
+    height: 120px;
+    /* 这里是土豆盒子多余要隐藏 */
+    overflow: hidden;
+    
+}
+.bd .tab_content .tab_list_item div a{
+    display: block;
+    width: 100%;
+    height: 100%;
+     /* 提高盒子的层级性 */
+   
+}
+.bd .tab_content .tab_list_item div a img{
+    width: 100%;
+    height: 100%;
+      
+}
+.bd .tab_content .tab_list_item em {
+        display: block;
+    height: 36px;
+    line-height: 1.5;
+    padding: 5px 0 8px;
+    text-align: left;
+    font-size: 14px;
+    /* overflow: hidden; */
+}
+
+.ship {
+    height: 199px;
+    padding: 10px;
+    /* background-color: pink; */
+    border: 1px solid rgb(230, 227, 227);
+    background-color: rgb(247, 247, 247);
+
+}
+/* 轮播图 */
+.wrap {
+    /* 超出部分,隐藏 */
+    overflow: hidden;
+    height: 175px;
+    width: 416px;
+    /* background-color: #cf1111; */
+}
+.box {
+    width: calc(416px*6);
+    /* 动画实现轮播过程 */
+    animation: swipe2 15s linear infinite;
+}
+.box img {
+    /* 浮动清除默认有边距样式 */
+    float: left;
+    width: 416px;
+    height: 175px;
+    /* background-color: aquamarine; */
+}
+@keyframes swipe2{
+    0% {
+        transform: translateX(0);
+    }
+    9% {
+        transform: translateX(0);
+    }
+    11% {
+transform: translateX(-416px);
+    }
+    29% {
+transform: translateX(-416px);
+    }
+    31% {
+transform: translateX(-832px);
+    }
+    49% {
+transform: translateX(-832px);
+    }
+    51% {
+transform: translateX(-1248px);
+    }
+    69% {
+transform: translateX(-1248px);
+    }
+    71% {
+transform: translateX(-1664px);
+    }
+    89% {
+transform: translateX(-1664px);
+    }
+    91% {
+        transform: translateX(-2080px);
+    }
+    100% {
+transform: translateX(-2080px);
+    }
+}
+.wrap {
+    float: left;
+    margin-right: 6px;
+}
+.ship ul li {
+    float: left;
+    width: 140px;
+    height: 166px;
+    margin-right: 10px;
+    font-size: 14px;
+    
+    /* 给爷盒子添加隐藏也可以 */
+    overflow: hidden;
+
+
+}
+
+.ship ul li p {
+    margin-top: 10px;
+}
+.ship ul li a img {
+    height: 88px;
+    width: 140px;
+    margin-right: 10px;
+}
+
+.youxi {
+    display: flex;
+}
+.youxi .cover {
+    float: left;
+}
+.cover em {
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0 5px 8px 0;
+}
+.youxi .picture a{
+display: block;
+width: 360px;
+height: 148px;
+background:url(../CF/68835876558620_MiddleAbbr.jpg) no-repeat;
+background-size: cover;
+}
+.youxi .think_1 {
+    width: 812px;
+    height: 320px;
+    /* background-color: pink; */
+}
+.think_1 .tou {
+    display: flex;
+   justify-content :space-between;
+
+
+}
+.think_1 .tou li {
+     height: 46px;
+    width: 95px;
+    text-align: center;
+    line-height: 46px;
+    font-size: 14px;
+}
+.think_1 .tou li:hover {
+    border-bottom:1px solid #f54027;
+}
+.think_1 .picture_right {
+    float: left;
+    margin-left: 10px ;
+}
+.think_1 .picture_right .item {
+    width: 440px;
+}
+.think_1 .picture_right .lnk {
+    width: 360px;
+    font-size: 16px;
+}
+
+.youxi .think_2 {
+    width: 368px;
+    height: 320px;
+   
+}
+.youxi .think_2 ul {
+    display: flex;
+    height: 249px;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.think_2 ul li a {
+    display: block;
+}
+
+
+/* 广告合作商 */
+.bot {
+    position: relative;
+    width: 1200px;
+    height: 200px;
+    /* background-color: pink; */
+    margin: 0 auto;
+    /* margin-top: 40px;  */
+}
+.botl {
+    display: grid;
+    float: left;
+    width: 810px;
+    height: 186px;
+    /* background-color: pink; */
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.botl div{
+    width: 260px;
+    height: 85px;
+    text-align: center;
+    line-height: 85px;
+
+}
+.section {
+    float: left;
+    width: 380px;
+    /* height: 186px; */
+    border: 3px solid rgb(226, 226, 226);
+    width: 385px;
+    /* height: 251px; */
+
+}
+.section a:hover {
+    color: #666666;
+}
+.section .section_1 {
+    display: block;
+    /* justify-content: space-between; */
+    width: 380px;
+    height: 51px;
+    line-height: 42px;
+    border: 1px solid #6c6c6c;
+}
+.section .section_3 {
+    float: right;
+    font-size: 18px;
+}
+.section_2 {
+    float: right;
+}
+.section .section_2::after {
+    font-family:'icomoon';
+    content: '\e91e';
+    font-size: 30px;
+
+    /* 这样显示就是一个小块 */
+    overflow: hidden;
+}
+
+
+.section:hover .hidden{
+     height: 195px;
+     overflow: auto;
+}
+
+.hidden {
+    width: 380px;
+    height: 0; /* 将高度设置为0 */
+    overflow: hidden; /*将overflow设置为hidden，使内容不可见*/
+    transition: height 0.1s ease; /* 设置过渡效果 */
+}
+.hidden li {
+    margin: 15px 0 3px 20px;
+    color: rgb(111, 111, 111);
+}
+.hidden li a:hover {
+    color: rgb(111, 111, 111);
+}
+
+.no {
+    display: grid;
+    position: absolute;
+    right: 0px;
+    top: 60px;
+    width: 370px;
+    height: 36px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2px;
+    row-gap: 4px;
+    /* transition: height 0.5s ease; */
+}
+.no div {
+    width: 90px;
+    height: 16px;
+}
+.section:hover .no {
+    display: none;
+    
+}
+
+
+
+.end {
+    margin-top: 60px;
+        background: #232222;
+
+}
+.end .free1 {
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+}
+.end .free2 {
+    padding: 15px 20px;
+    height: 175px;
+    color: #fff;
+    font-size: 12px;
+}
+.free2 ul li{
+    float: right;
+    width: 682px;
+}
+.free2 ul li a {
+    color: #fff;
+}
+.free2 .last {
+    position: relative;
+}
+.free2 .last .last1 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 35px;
+    width: 140px;
+    margin: 10px 0 0 10px;
+    background:url(../CF/foot_bg.jpg) no-repeat -37px -121px;
+}
+.free2 .last .last2 {
+     display: block;
+     top: 0;
+     left: 160px;
+    position: absolute;
+     height: 35px;
+    width: 140px;
+    background:url(../CF/foot_bg.jpg) no-repeat -179px -116px;
+}
+
+
+.hidden_111 {
+    position: relative;
+    display: none;
+    float: left;
+    width: 1012px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.hidden-box {
+    display: flex;
+    float: left;
+    width: 4048px;
+    height: 204px;
+    animation: www 15s ease-in-out infinite;
+}
+
+#toggle:checked ~ .hidden_111 {
+    display: block;
+    z-index: 100;
+}
+@keyframes www {
+    0% {
+    transform: translateX(0);
+    }
+    22% {
+        transform: translateX(0);
+    }
+    24% {
+        transform: translateX(-1012px);
+    }
+    44% {
+        transform: translateX(-1012px);
+    }
+    46% {
+        transform: translateX(-2024px);
+    }
+    68% {
+        transform: translateX(-2024px);
+    }
+    70% {
+        transform: translateX(-3036px);
+    }
+    92% {
+        transform: translateX(-3036px);
+    }
+    94% {
+        transform: translateX(-4048px);
+    }
+    98% {
+        transform: translateX(-4048px);
+    }
+    100% {
+        transform: translateX(-4048px);
+    }
+}
+
+
+
+
+
